@@ -1757,7 +1757,7 @@ input, select, textarea {
 		.image.avatar48 {
 			width: 48px;
 			height: 48px;
-			background: #f00;
+
 		}
 
 			.image.avatar48 img {
@@ -2241,10 +2241,30 @@ input, select, textarea {
 					}
 
 			#main > section.cover {
-				padding: 10em 0;
-				background-size: cover;
-				background-position: center center;
-			}
+                min-height: 100vh;            /* Full viewport height */
+                display: flex;                /* Flexbox for centering */
+                align-items: center;          /* Center vertically */
+                justify-content: center;      /* Center horizontally */
+                flex-direction: column;       /* Stack elements vertically */
+                padding: 0;                   /* Remove excess padding */
+                background-size: cover;       /* Keep your background settings */
+                background-position: center center;
+                    }
+
+            #top {
+                min-height: 100vh;            /* Fill the viewport */
+                display: flex;                /* Flexbox for centering */
+                flex-direction: column;       /* Stack content vertically */
+                align-items: center;          /* Center vertically */
+                justify-content: center;      /* Center horizontally */
+                padding: 0;                   /* Override any padding */
+                background-color: rgba(0, 0, 0, 0.5); /* Optional */
+                background-image: url('../images/banner.jpg');
+                background-size: cover;
+                background-position: center;
+                background-blend-mode: multiply;
+                    }
+
 
             #main > section.one {
                 background-color: rgba(0, 0, 0, 0.5); /* Darken with transparent black */
